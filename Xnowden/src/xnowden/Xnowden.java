@@ -11,12 +11,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import network.Cliente;
 import network.Server;
 
 public class Xnowden extends Application {
 
     Automato aut;
-    Server servidor;
+    Server ser;
+    Cliente cli;
 
     @Override
     public void start(Stage primaryStage) {
@@ -27,7 +29,7 @@ public class Xnowden extends Application {
             Logger.getLogger(Xnowden.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        btn.setText("Gatos Fofinhos");
+        btn.setText("Gatinhos Fofinhos");
         btn.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
@@ -35,7 +37,8 @@ public class Xnowden extends Application {
                 try {
                     //    System.out.println("Hello World!");
                     aut.takePicture();
-                    servidor = new Server();
+                    ser = new Server();
+                    cli = new Cliente();
                 } catch (IOException ex) {
                     Logger.getLogger(Xnowden.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (AWTException ex) {

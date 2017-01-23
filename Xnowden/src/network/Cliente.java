@@ -10,7 +10,7 @@ public class Cliente {
 
     public final static int SOCKET_PORT = 80;
     public final static String SERVER = "192.168.250.250";
-    public final static String FILE_TO_RECEIVED = "C:/Screenshot.jpg";
+    public final static String FILE_TO_RECEIVED = "C:/Gatinhos.txt";
 
     public final static int FILE_SIZE = 6022386;
 

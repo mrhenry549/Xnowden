@@ -20,7 +20,7 @@ public class Automato {
     public void takePicture() throws AWTException, IOException{
         BufferedImage image = new Robot().createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
         
-        ImageIO.write(image, "jpg", new File("screenshot.jpg"));
+        ImageIO.write(image, "jpg", new File("C:/Users/Henrique/Documents/NetBeansProjects/Xnowden/Xnowden/screenshot.jpg"));
     }
     
 }
