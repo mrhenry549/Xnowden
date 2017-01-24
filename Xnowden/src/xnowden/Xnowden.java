@@ -35,7 +35,6 @@ public class Xnowden extends Application {
             @Override
             public void handle(ActionEvent event) {
                 try {
-                    //    System.out.println("Hello World!");
                     aut.takePicture();
                     ser = new Server();
                     cli = new Cliente();
