@@ -22,7 +22,6 @@ public class Cliente {
         Socket sock = null;
         try {
             sock = new Socket(SERVER, SOCKET_PORT);
-            System.out.println("Conectando...");
 
             // receive file
             byte[] mybytearray = new byte[FILE_SIZE];
@@ -41,7 +40,6 @@ public class Cliente {
 
             bos.write(mybytearray, 0, current);
             bos.flush();
-            System.out.println("Ficheiro " + FILE_TO_RECEIVED + " recebido (" + current + " bytes lidos)");
         } finally {
             if (fos != null) {
                 fos.close();

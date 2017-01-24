@@ -22,10 +22,8 @@ public class Server {
         try {
             servsock = new ServerSocket(SOCKET_PORT);
             while (true) {
-                System.out.println("Em espera...");
                 try {
                     sock = servsock.accept();
-                    System.out.println("Conecção aceite: " + sock);
                     // send file
                     File myFile = new File(FILE_TO_SEND);
                     byte[] mybytearray = new byte[(int) myFile.length()];
@@ -33,7 +31,6 @@ public class Server {
                     bis = new BufferedInputStream(fis);
                     bis.read(mybytearray, 0, mybytearray.length);
                     os = sock.getOutputStream();
-                    System.out.println("Enviando " + FILE_TO_SEND + " (" + mybytearray.length + " bytes)");
                     os.write(mybytearray, 0, mybytearray.length);
                     os.flush();
                     System.out.println("Feito.");
